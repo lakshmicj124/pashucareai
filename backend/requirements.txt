@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+opencv-python
+python-dotenv
+motor
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt
+httpx
+numpy
+pillow
+pillow-heif
+scikit-learn
+joblib
+pypdf

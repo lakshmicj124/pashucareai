@@ -1,0 +1,11 @@
+node_modules/
+backend/venv/
+backend/__pycache__/
+frontend/node_modules/
+dataset/
+backend/dataset/
+*.pyc
+.env
+.vscode/
+brain/
+scratch/

@@ -1,0 +1,137 @@
+Query tokens: {'और', 'हैं', 'को', 'पर', 'है', 'त्वचा', 'गांठें', 'बुखार', 'मेरी', 'गाय'}
+Enriched tokens: {'और', 'cattle', 'हैं', 'को', 'पर', 'skin', 'cow', 'fever', 'है', 'nodule', 'त्वचा', 'temperature', 'गांठें', 'nodules', 'बुखार', 'मेरी', 'गाय'}
+Disease: Foot and Mouth Disease, Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Mastitis, Score: 4
+  Name intersect: set()
+  Sym intersect: {'cow', 'fever'}
+Disease: Lumpy Skin Disease, Score: 11
+  Name intersect: {'skin'}
+  Sym intersect: {'nodules', 'skin', 'fever'}
+Disease: Black Quarter (Black Leg), Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Healthy, Score: 2
+  Name intersect: set()
+  Sym intersect: {'temperature'}
+Disease: Peste des Petits Ruminants (PPR), Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Goat Pox, Score: 6
+  Name intersect: set()
+  Sym intersect: {'nodules', 'skin', 'fever'}
+Disease: Sheep Scab (Psoroptic Mange), Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Blue Tongue, Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Pneumonia, Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Malignant Catarrhal Fever, Score: 7
+  Name intersect: {'fever'}
+  Sym intersect: {'fever'}
+Disease: Downer Cow Syndrome, Score: 7
+  Name intersect: {'cow'}
+  Sym intersect: {'cow'}
+Disease: Mosquito-borne Fever, Score: 7
+  Name intersect: {'fever'}
+  Sym intersect: {'fever'}
+Disease: Skin Ulcer, Score: 7
+  Name intersect: {'skin'}
+  Sym intersect: {'skin'}
+Disease: Skin Tumor, Score: 7
+  Name intersect: {'skin'}
+  Sym intersect: {'skin'}
+Disease: Postpartum Fever, Score: 7
+  Name intersect: {'fever'}
+  Sym intersect: {'fever'}
+Disease: Transport Fever, Score: 7
+  Name intersect: {'fever'}
+  Sym intersect: {'fever'}
+Disease: Ringworm, Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Warts, Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Dermatophilosis, Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Milk Fever, Score: 7
+  Name intersect: {'fever'}
+  Sym intersect: {'fever'}
+Disease: Contagious Caprine Pleuropneumonia (CCPP), Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Goat Plague, Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Rinderpest-like Syndrome, Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Rumenitis, Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Fly Strike, Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Skin Abscess, Score: 7
+  Name intersect: {'skin'}
+  Sym intersect: {'fever'}
+Disease: Photosensitization, Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Peritonitis, Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Umbilical Infection, Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Joint Ill, Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Edema, Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Hyperthermia, Score: 2
+  Name intersect: set()
+  Sym intersect: {'temperature'}
+Disease: Endocarditis, Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Septic Arthritis, Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Osteomyelitis, Score: 2
+  Name intersect: set()
+  Sym intersect: {'fever'}
+Disease: Cellulitis, Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Transportation Fever, Score: 7
+  Name intersect: {'fever'}
+  Sym intersect: {'fever'}
+Disease: Milk Fever, Score: 5
+  Name intersect: {'fever'}
+  Sym intersect: set()
+Disease: Mange Dermatitis, Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Fungal Dermatitis, Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Allergic Dermatitis, Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Sunburn Dermatitis, Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Pressure Sores, Score: 2
+  Name intersect: set()
+  Sym intersect: {'skin'}
+Disease: Chronic Fever Syndrome, Score: 7
+  Name intersect: {'fever'}
+  Sym intersect: {'fever'}

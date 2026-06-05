@@ -1,0 +1,20 @@
+--- Fever ---
+hi: Fever or underlying infectious disease -> बुखार या अंतर्निहित संक्रामक रोग
+hi: The goat is experiencing extreme tiredness and reduced activity, indicating an underlying systemic infection, metabolic issue, or high fever. -> बकरी अत्यधिक थकान और कम गतिविधि का अनुभव कर रही है, जो एक अंतर्निहित प्रणालीगत संक्रमण, चयापचय समस्या या तेज बुखार का संकेत देती है।
+hi: The goat has stopped eating, which is a primary indicator of pain, fever, metabolic disturbance, or stress. -> बकरी ने खाना बंद कर दिया है, जो दर्द, बुखार, चयापचय में गड़बड़ी या तनाव का मुख्य संकेतक है।
+hi: Antipyretics if fever is present -> बुखार होने पर एंटीपीयरेटिक्स
+hi: Check body temperature for fever -> बुखार के लिए शरीर के तापमान की जांच करें
+kn: Fever or underlying infectious disease -> ಜ್ವರ ಅಥವಾ ಆಂತರಿಕ ಸಾಂಕ್ರಾಮಿಕ ರೋಗ
+kn: The goat is experiencing extreme tiredness and reduced activity, indicating an underlying systemic infection, metabolic issue, or high fever. -> ಮೇಕೆ ತೀವ್ರ ಆಯಾಸ ಮತ್ತು ಕಡಿಮೆ ಚಟುವಟಿಕೆಯನ್ನು ಅನುಭವಿಸುತ್ತಿದೆ, ಇದು ಆಂತರಿಕ ಸೋಂಕು ಅಥವಾ ಹೆಚ್ಚಿನ ಜ್ವರವನ್ನು ಸೂಚಿಸುತ್ತದೆ.
+kn: The goat has stopped eating, which is a primary indicator of pain, fever, metabolic disturbance, or stress. -> ಮೇಕೆ ಆಹಾರ ಸೇವನೆಯನ್ನು ನಿಲ್ಲಿಸಿದೆ, ಇದು ನೋವು, ಜ್ವರ ಅಥವಾ ಒತ್ತಡದ ಪ್ರಾಥಮಿಕ ಸೂಚಕವಾಗಿದೆ.
+kn: Antipyretics if fever is present -> ಜ್ವರವಿದ್ದರೆ ಜ್ವರನಿವಾರಕಗಳು
+kn: Check body temperature for fever -> ಜ್ವರಕ್ಕಾಗಿ ದೇಹದ ಉಷ್ಣತೆಯನ್ನು ಪರಿಶೀಲಿಸಿ
+--- Skin nodules ---
+--- Firm round skin nodules (2–5 cm diameter) ---
+--- Swollen lymph nodes ---
+--- Decreased milk yield ---
+--- Nasal and ocular discharge ---
+--- Edema of limbs ---
+--- Loss of appetite ---
+hi: Loss of Appetite -> भूख न लगना
+kn: Loss of Appetite -> ಹಸಿವು ಇಲ್ಲದಿರುವುದು

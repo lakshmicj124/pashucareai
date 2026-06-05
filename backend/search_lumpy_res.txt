@@ -1,0 +1,4 @@
+37: 'Lumpy Skin Disease': 'ಗಂಟು ಚರ್ಮ ರೋಗ',
+185: 'Bacterial infection (e.g., Actinomyces/lumpy jaw)': 'ಬ್ಯಾಕ್ಟೀರಿಯಾ ಸೋಂಕು (ಉದಾಹರಣೆಗೆ, ಆಕ್ಟಿನೊಮೈಸೆಸ್/ದವಡೆ ಬಾವು)',
+392: 'Lumpy Skin Disease': 'ढेलादार त्वचा रोग (लम्पी)',
+540: 'Bacterial infection (e.g., Actinomyces/lumpy jaw)': 'बैक्टीरिया का संक्रमण (जैसे, एक्टिनोमाइसेस/लम्पी जॉ)',
