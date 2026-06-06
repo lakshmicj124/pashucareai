@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useLanguage } from "../context/LanguageContext";
-import api from "../services/api";
+import api, { API_BASE_URL } from "../services/api";
 import { 
   Activity, ShieldAlert, CheckCircle, MapPin, MessageSquare, 
   Settings, User, Plus, Calendar, ArrowRight, TrendingUp, Info
@@ -184,7 +184,7 @@ const Dashboard = () => {
                     >
                       {record.image_url ? (
                         <img 
-                          src={`http://127.0.0.1:8000${record.image_url}`} 
+                          src={`${API_BASE_URL}${record.image_url}`} 
                           alt="prediction thumbnail" 
                           className="w-14 h-14 object-cover rounded-lg shrink-0 bg-slate-900"
                         />

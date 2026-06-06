@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth, api } from "../context/AuthContext";
+import { API_BASE_URL } from "../services/api";
 import { Users, Activity, MessageSquare, AlertTriangle, Shield, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -144,7 +145,7 @@ const AdminDashboard = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-lg bg-slate-800 overflow-hidden">
                     {d.image_url ? (
-                      <img src={`http://127.0.0.1:8000${d.image_url}`} alt="Detection" className="w-full h-full object-cover" />
+                      <img src={`${API_BASE_URL}${d.image_url}`} alt="Detection" className="w-full h-full object-cover" />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center text-slate-500">?</div>
                     )}

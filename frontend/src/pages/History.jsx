@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { useAuth } from "../context/AuthContext";
-import api from "../services/api";
+import api, { API_BASE_URL } from "../services/api";
 import { History as HistoryIcon, Calendar, ArrowRight, ShieldCheck, Clipboard, ExternalLink, Pill, HeartHandshake, Stethoscope, Trash2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -120,7 +120,7 @@ const History = () => {
                   >
                     {record.image_url ? (
                       <img
-                        src={`http://127.0.0.1:8000${record.image_url}`}
+                        src={`${API_BASE_URL}${record.image_url}`}
                         alt="Diagnosis Thumbnail"
                         className="w-16 h-16 rounded-lg object-cover bg-slate-950 shrink-0"
                       />
@@ -194,7 +194,7 @@ const History = () => {
                       {selectedRecord.image_url && (
                         <div className="border border-slate-850 rounded-xl overflow-hidden bg-slate-950">
                           <img
-                            src={`http://127.0.0.1:8000${selectedRecord.image_url}`}
+                            src={`${API_BASE_URL}${selectedRecord.image_url}`}
                             alt="Diagnosis Record"
                             className="w-full h-auto max-h-48 object-contain"
                           />

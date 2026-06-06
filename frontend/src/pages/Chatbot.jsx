@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
-import api from "../services/api";
+import api, { API_BASE_URL } from "../services/api";
 import { 
   Bot, Send, Volume2, VolumeX, Trash2, HelpCircle, Activity, 
   Sparkles, User, AlertCircle, Paperclip, Image as ImageIcon, X,
@@ -660,7 +660,7 @@ const Chatbot = () => {
                         {!isUser && msg.imageUrl && (
                           <div className="mb-2 max-w-sm rounded-xl overflow-hidden border border-slate-850 shadow-md">
                             <img
-                              src={`http://127.0.0.1:8000${msg.imageUrl}`}
+                              src={`${API_BASE_URL}${msg.imageUrl}`}
                               alt="AI diagnosed visual feed"
                               className="max-h-48 object-cover w-full"
                             />
