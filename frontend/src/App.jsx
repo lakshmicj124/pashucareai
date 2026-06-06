@@ -4,6 +4,7 @@ import { AuthProvider } from "./context/AuthContext";
 import { LanguageProvider } from "./context/LanguageContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AdminProtectedRoute from "./components/AdminProtectedRoute";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -17,6 +18,8 @@ import History from "./pages/History";
 import Settings from "./pages/Settings";
 import Chatbot from "./pages/Chatbot";
 import Dashboard from "./pages/Dashboard";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 
 // Styling
 import "./App.css";
@@ -32,12 +35,13 @@ function App() {
               <Navbar />
 
             {/* Main Content Area */}
-            <main className="flex-grow">
+            <main className="grow">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/vets" element={<NearbyVets />} />
+                <Route path="/admin/login" element={<AdminLogin />} />
                 
                 {/* Protected Routes */}
                 <Route
@@ -80,6 +84,16 @@ function App() {
                     </ProtectedRoute>
                   }
                 />
+
+                {/* Admin Routes */}
+                <Route
+                  path="/admin/dashboard"
+                  element={
+                    <AdminProtectedRoute>
+                      <AdminDashboard />
+                    </AdminProtectedRoute>
+                  }
+                />
               </Routes>
             </main>
 
@@ -94,3 +108,4 @@ function App() {
 }
 
 export default App;
+

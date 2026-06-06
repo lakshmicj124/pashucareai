@@ -4,6 +4,7 @@ import axios from "axios";
 // Create custom API client instance
 export const api = axios.create({
   baseURL: "http://127.0.0.1:8000",
+  timeout: 10000, // 10 seconds timeout
 });
 
 const AuthContext = createContext();
@@ -93,3 +94,4 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
+

@@ -41,7 +41,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-400 via-teal-350 to-cyan-400 bg-clip-text text-transparent max-w-4xl mx-auto leading-tight"
+            className="text-4xl sm:text-6xl font-extrabold tracking-tight bg-linear-to-r from-emerald-400 via-teal-350 to-cyan-400 bg-clip-text text-transparent max-w-4xl mx-auto leading-tight"
           >
             {t("heroTitle")}
           </motion.h1>
@@ -63,7 +63,7 @@ const Home = () => {
           >
             <Link
               to="/detect"
-              className="flex items-center justify-center space-x-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-lg shadow-emerald-500/25 transition-all text-lg cursor-pointer"
+              className="flex items-center justify-center space-x-2 bg-linear-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-lg shadow-emerald-500/25 transition-all text-lg cursor-pointer"
             >
               <span>{t("startDetection")}</span>
               <ArrowRight className="w-5 h-5" />
@@ -190,3 +190,4 @@ const Home = () => {
 };
 
 export default Home;
+

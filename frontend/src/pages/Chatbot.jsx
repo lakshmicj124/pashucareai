@@ -461,7 +461,7 @@ const Chatbot = () => {
           {/* New Chat Button */}
           <button
             onClick={startNewChat}
-            className="w-full flex items-center justify-center gap-2 py-3 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 hover:from-emerald-500/20 hover:to-teal-500/20 border border-emerald-500/30 text-emerald-450 hover:text-white font-extrabold rounded-2xl transition-all shadow-lg hover:shadow-emerald-500/5 duration-350 cursor-pointer"
+            className="w-full flex items-center justify-center gap-2 py-3 bg-linear-to-r from-emerald-500/10 to-teal-500/10 hover:from-emerald-500/20 hover:to-teal-500/20 border border-emerald-500/30 text-emerald-450 hover:text-white font-extrabold rounded-2xl transition-all shadow-lg hover:shadow-emerald-500/5 duration-350 cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>{localT.newChat}</span>
@@ -548,7 +548,7 @@ const Chatbot = () => {
                 <Menu className="w-5 h-5" />
               </button>
 
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-slate-950 font-bold shadow-lg shadow-emerald-500/10">
+              <div className="w-10 h-10 rounded-xl bg-linear-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-slate-950 font-bold shadow-lg shadow-emerald-500/10">
                 <Bot className="w-5 h-5 text-slate-950" />
               </div>
               <div>
@@ -809,12 +809,12 @@ const Chatbot = () => {
               onChange={(e) => setInput(e.target.value)}
               placeholder={imagePreview ? "Type details (optional) and send..." : localT.chatPlaceholder}
               disabled={loading}
-              className="flex-grow px-4 py-3 text-sm bg-slate-950 border border-slate-800 text-white rounded-xl focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 focus:outline-none transition-all placeholder-slate-500 disabled:opacity-60"
+              className="grow px-4 py-3 text-sm bg-slate-950 border border-slate-800 text-white rounded-xl focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 focus:outline-none transition-all placeholder-slate-500 disabled:opacity-60"
             />
             <button
               type="submit"
               disabled={loading || (!input.trim() && !imageFile)}
-              className="px-4.5 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-extrabold rounded-xl transition-all shadow-md shadow-emerald-500/10 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center cursor-pointer shrink-0"
+              className="px-4.5 py-3 bg-linear-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-extrabold rounded-xl transition-all shadow-md shadow-emerald-500/10 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center cursor-pointer shrink-0"
             >
               <Send className="w-4 h-4 text-slate-950" />
             </button>
@@ -826,3 +826,4 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
+

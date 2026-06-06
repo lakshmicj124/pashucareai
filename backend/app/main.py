@@ -7,8 +7,8 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 
 from .config import settings
-from .database import connect_db, close_db
-from .routes import auth, detection, vets, chat
+from .database import connect_db, close_db, get_db
+from .routes import auth, detection, vets, chat, admin
 
 app = FastAPI(
     title="PashuCare AI Backend",
@@ -37,6 +37,23 @@ app.mount("/uploads", StaticFiles(directory=settings.UPLOAD_DIR), name="uploads"
 async def startup_event():
     """Run startup tasks such as connecting to the database."""
     await connect_db()
+    
+    # Create default admin account if none exists
+    db = get_db()
+    if db is not None:
+        admin_exists = await db.users.find_one({"role": "admin"})
+        if not admin_exists:
+            from .services.auth_service import hash_password
+            from datetime import datetime, timezone
+            await db.users.insert_one({
+                "name": "Admin",
+                "email": "admin@example.com",
+                "phone_number": "+910000000000",
+                "password": hash_password("ChangeMe123@"),
+                "role": "admin",
+                "created_at": datetime.now(timezone.utc).isoformat()
+            })
+
 
 
 @app.on_event("shutdown")
@@ -50,6 +67,7 @@ app.include_router(auth.router)
 app.include_router(chat.router)
 app.include_router(detection.router)
 app.include_router(vets.router)
+app.include_router(admin.router)
 
 
 

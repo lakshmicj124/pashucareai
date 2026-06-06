@@ -160,7 +160,7 @@ const NearbyVets = () => {
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-2">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-emerald-400 to-teal-400">
             {t("nearbyVetHospital")}
           </h1>
           <p className="text-slate-400 text-sm max-w-md mx-auto">
@@ -449,3 +449,4 @@ const NearbyVets = () => {
 };
 
 export default NearbyVets;
+

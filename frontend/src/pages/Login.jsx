@@ -140,7 +140,7 @@ const Login = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-extrabold py-3 px-4 rounded-xl shadow-lg shadow-emerald-500/20 transition-all cursor-pointer"
+            className="w-full flex items-center justify-center space-x-2 bg-linear-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-extrabold py-3 px-4 rounded-xl shadow-lg shadow-emerald-500/20 transition-all cursor-pointer"
           >
             {loading ? (
               <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-slate-950"></div>
@@ -167,3 +167,4 @@ const Login = () => {
 };
 
 export default Login;
+

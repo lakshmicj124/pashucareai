@@ -22,6 +22,7 @@ class UserResponse(BaseModel):
     name: str
     email: str
     phone_number: Optional[str] = None
+    role: str = "user"
 
 
 class TokenResponse(BaseModel):

@@ -1,11 +1,9 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { useLanguage } from "../context/LanguageContext";
 
-const ProtectedRoute = ({ children }) => {
+const AdminProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
-  const { t } = useLanguage();
 
   if (loading) {
     return (
@@ -16,11 +14,15 @@ const ProtectedRoute = ({ children }) => {
   }
 
   if (!user) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/admin/login" replace />;
+  }
+
+  if (user.role !== "admin") {
+    return <Navigate to="/dashboard" replace />;
   }
 
   return children;
 };
 
-export default ProtectedRoute;
+export default AdminProtectedRoute;
 

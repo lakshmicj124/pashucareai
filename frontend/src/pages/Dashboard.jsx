@@ -87,7 +87,7 @@ const Dashboard = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 shadow-xl">
           <div>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
-              Welcome, <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">{user?.name || "Farmer"}</span>! 🐄
+              Welcome, <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 to-teal-400">{user?.name || "Farmer"}</span>! 🐄
             </h1>
             <p className="text-slate-400 text-sm mt-1">
               Monitor your livestock health status, run scans, and coordinate with veterinarians.
@@ -95,7 +95,7 @@ const Dashboard = () => {
           </div>
           <Link
             to="/detect"
-            className="flex items-center space-x-2 px-5 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-extrabold rounded-2xl transition shadow-lg shadow-emerald-500/10 cursor-pointer text-sm shrink-0"
+            className="flex items-center space-x-2 px-5 py-3 bg-linear-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-extrabold rounded-2xl transition shadow-lg shadow-emerald-500/10 cursor-pointer text-sm shrink-0"
           >
             <Plus className="w-5 h-5" />
             <span>Scan Livestock Animal</span>
@@ -194,7 +194,7 @@ const Dashboard = () => {
                         </div>
                       )}
 
-                      <div className="flex-grow min-w-0">
+                      <div className="grow min-w-0">
                         <div className="flex items-center justify-between">
                           <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">{record.animal_type}</span>
                           <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold ${getSeverityBadgeColor(record.severity_color)}`}>
@@ -278,7 +278,7 @@ const Dashboard = () => {
                 ></iframe>
               </div>
 
-              <div className="space-y-3 flex-grow flex flex-col justify-end">
+              <div className="space-y-3 grow flex flex-col justify-end">
                 <div className="flex items-start space-x-2 text-xs text-slate-400">
                   <Info className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                   <p>
@@ -302,3 +302,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+

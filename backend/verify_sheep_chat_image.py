@@ -11,7 +11,7 @@ def test_sheep_api():
     print("Testing sheep diagnostics API routes...")
     
     dataset_dir = r"c:\Users\DELL\Documents\cow disease project\dataset"
-    diseased_folder = os.path.join(dataset_dir, "diseased sheep")
+    diseased_folder = os.path.join(dataset_dir, "sheep", "diseased_sheep")
     
     if not os.path.exists(diseased_folder):
         print("ERROR: Diseased sheep folder not found.")

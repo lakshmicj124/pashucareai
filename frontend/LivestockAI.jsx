@@ -222,10 +222,10 @@ const GlassCard = ({ children, className = "", dark }) => (
 
 const GradientBtn = ({ onClick, children, variant = "primary", className = "", disabled }) => {
   const variants = {
-    primary: "bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white shadow-lg shadow-emerald-500/30",
-    danger: "bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-white shadow-lg shadow-red-500/30",
+    primary: "bg-linear-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white shadow-lg shadow-emerald-500/30",
+    danger: "bg-linear-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-white shadow-lg shadow-red-500/30",
     outline: "border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50",
-    secondary: "bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white shadow-lg shadow-blue-500/30"
+    secondary: "bg-linear-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white shadow-lg shadow-blue-500/30"
   };
   return (
     <motion.button whileHover={{ scale: disabled ? 1 : 1.02 }} whileTap={{ scale: disabled ? 1 : 0.97 }}
@@ -257,11 +257,11 @@ const LoadingSpinner = ({ dark }) => (
 const LandingPage = ({ onEnter, lang, dark }) => {
   const t = T[lang];
   return (
-    <div className={`min-h-screen ${dark ? "bg-gray-950" : "bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50"} overflow-hidden`}>
+    <div className={`min-h-screen ${dark ? "bg-gray-950" : "bg-linear-to-br from-emerald-50 via-teal-50 to-cyan-50"} overflow-hidden`}>
       {/* Nav */}
       <nav className={`fixed top-0 w-full z-40 px-6 py-4 flex items-center justify-between backdrop-blur-md border-b ${dark ? "bg-gray-900/80 border-gray-800" : "bg-white/70 border-white/50"}`}>
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/30">
+          <div className="w-9 h-9 rounded-xl bg-linear-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/30">
             <Leaf size={18} className="text-white" />
           </div>
           <span className={`font-bold text-lg ${dark ? "text-white" : "text-gray-900"}`}>{t.appName}</span>
@@ -281,7 +281,7 @@ const LandingPage = ({ onEnter, lang, dark }) => {
             </div>
             <h1 className={`text-4xl md:text-5xl font-extrabold leading-tight mb-6 ${dark ? "text-white" : "text-gray-900"}`}>
               {t.heroTitle.split(" ").map((w, i) => (
-                <span key={i} className={i >= 3 ? "text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500" : ""}>{w} </span>
+                <span key={i} className={i >= 3 ? "text-transparent bg-clip-text bg-linear-to-r from-emerald-500 to-teal-500" : ""}>{w} </span>
               ))}
             </h1>
             <p className={`text-lg mb-8 leading-relaxed ${dark ? "text-gray-300" : "text-gray-600"}`}>{t.heroSubtitle}</p>
@@ -302,7 +302,7 @@ const LandingPage = ({ onEnter, lang, dark }) => {
           <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative">
             <div className={`rounded-3xl p-6 ${dark ? "bg-gray-800/80 border border-gray-700" : "bg-white/90 border border-emerald-100"} shadow-2xl shadow-emerald-200/40`}>
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-linear-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
                   <Activity size={20} className="text-white" />
                 </div>
                 <div>
@@ -315,7 +315,7 @@ const LandingPage = ({ onEnter, lang, dark }) => {
               <div className="flex items-center gap-2 mb-4">
                 <div className="flex-1 h-3 rounded-full bg-gray-100 overflow-hidden">
                   <motion.div initial={{ width: 0 }} animate={{ width: "94%" }} transition={{ delay: 0.5, duration: 1 }}
-                    className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600" />
+                    className="h-full rounded-full bg-linear-to-r from-emerald-400 to-emerald-600" />
                 </div>
                 <span className="text-sm font-bold text-emerald-600">94%</span>
               </div>
@@ -328,7 +328,7 @@ const LandingPage = ({ onEnter, lang, dark }) => {
                 ))}
               </div>
               <div className="mt-4 p-3 rounded-xl bg-red-50 border border-red-100 flex items-start gap-2">
-                <AlertTriangle size={16} className="text-red-500 mt-0.5 flex-shrink-0" />
+                <AlertTriangle size={16} className="text-red-500 mt-0.5 shrink-0" />
                 <span className="text-xs text-red-600 font-medium">Immediate veterinary attention required. Isolate animal now.</span>
               </div>
             </div>
@@ -361,7 +361,7 @@ const LandingPage = ({ onEnter, lang, dark }) => {
             <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }}
               whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
               className={`p-6 rounded-2xl border ${dark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-100"} cursor-default`}>
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${f.color} flex items-center justify-center mb-4 shadow-lg`}>
+              <div className={`w-12 h-12 rounded-xl bg-linear-to-br ${f.color} flex items-center justify-center mb-4 shadow-lg`}>
                 <f.icon size={24} className="text-white" />
               </div>
               <h3 className={`text-lg font-bold mb-2 ${dark ? "text-white" : "text-gray-900"}`}>{f.title}</h3>
@@ -407,12 +407,12 @@ const AuthPage = ({ mode, onAuth, onToggle, lang, dark }) => {
   };
 
   return (
-    <div className={`min-h-screen flex items-center justify-center p-4 ${dark ? "bg-gray-950" : "bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50"}`}>
+    <div className={`min-h-screen flex items-center justify-center p-4 ${dark ? "bg-gray-950" : "bg-linear-to-br from-emerald-50 via-teal-50 to-cyan-50"}`}>
       <motion.div initial={{ opacity: 0, y: 30, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.5 }}
         className={`w-full max-w-md rounded-3xl p-8 ${dark ? "bg-gray-900 border border-gray-800" : "bg-white/90 backdrop-blur-md border border-white/60"} shadow-2xl shadow-emerald-200/30`}>
 
         <div className="flex items-center gap-3 mb-8">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-linear-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
             <Leaf size={20} className="text-white" />
           </div>
           <div>
@@ -484,7 +484,7 @@ const EmergencyModal = ({ disease, onDismiss, lang, dark }) => {
       <motion.div initial={{ scale: 0.8, y: 40 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.8, y: 40 }}
         className={`w-full max-w-md rounded-3xl overflow-hidden shadow-2xl ${dark ? "bg-gray-900" : "bg-white"}`}>
         {/* Red header */}
-        <div className="bg-gradient-to-r from-red-500 to-rose-600 p-6 relative overflow-hidden">
+        <div className="bg-linear-to-r from-red-500 to-rose-600 p-6 relative overflow-hidden">
           <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 1.5 }}
             className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-red-400/30" />
           <div className="flex items-center gap-3 mb-2">
@@ -500,7 +500,7 @@ const EmergencyModal = ({ disease, onDismiss, lang, dark }) => {
             <div className={`text-sm font-bold mb-2 ${dark ? "text-white" : "text-gray-800"}`}>🚨 Immediate Actions Required:</div>
             {disease.firstAid.slice(0, 3).map((step, i) => (
               <div key={i} className="flex items-start gap-2 mb-2">
-                <div className="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">{i + 1}</div>
+                <div className="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">{i + 1}</div>
                 <span className={`text-sm ${dark ? "text-gray-300" : "text-gray-600"}`}>{step}</span>
               </div>
             ))}
@@ -537,7 +537,7 @@ const Sidebar = ({ active, onNav, user, collapsed, onCollapse, lang, dark, unrea
       className={`fixed left-0 top-0 h-full z-30 flex flex-col border-r ${dark ? "bg-gray-900 border-gray-800" : "bg-white border-gray-100"} shadow-xl`}>
       {/* Logo */}
       <div className="h-16 flex items-center px-4 border-b gap-3 border-gray-100 dark:border-gray-800">
-        <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center flex-shrink-0 shadow-lg">
+        <div className="w-9 h-9 rounded-xl bg-linear-to-br from-emerald-500 to-teal-500 flex items-center justify-center shrink-0 shadow-lg">
           <Leaf size={18} className="text-white" />
         </div>
         {!collapsed && <span className={`font-extrabold text-base truncate ${dark ? "text-white" : "text-gray-900"}`}>{t.appName}</span>}
@@ -550,7 +550,7 @@ const Sidebar = ({ active, onNav, user, collapsed, onCollapse, lang, dark, unrea
       {!collapsed && (
         <div className={`mx-3 mt-3 p-3 rounded-xl ${dark ? "bg-gray-800" : "bg-emerald-50"}`}>
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+            <div className="w-9 h-9 rounded-full bg-linear-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white font-bold text-sm shrink-0">
               {(user?.name || "U")[0]}
             </div>
             <div className="min-w-0">
@@ -567,9 +567,9 @@ const Sidebar = ({ active, onNav, user, collapsed, onCollapse, lang, dark, unrea
           <motion.button key={item.key} whileHover={{ x: 2 }} onClick={() => onNav(item.key)}
             className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all relative
               ${active === item.key
-                ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25"
+                ? "bg-linear-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25"
                 : dark ? "text-gray-400 hover:bg-gray-800 hover:text-white" : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"}`}>
-            <item.icon size={18} className="flex-shrink-0" />
+            <item.icon size={18} className="shrink-0" />
             {!collapsed && <span className="truncate">{item.label}</span>}
             {item.badge > 0 && (
               <span className={`${collapsed ? "absolute -top-1 -right-1" : "ml-auto"} min-w-[18px] h-[18px] px-1 rounded-full bg-red-500 text-white text-[10px] font-bold flex items-center justify-center`}>
@@ -583,7 +583,7 @@ const Sidebar = ({ active, onNav, user, collapsed, onCollapse, lang, dark, unrea
       {/* Logout */}
       <div className="p-3 border-t border-gray-100 dark:border-gray-800">
         <button className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium ${dark ? "text-gray-400 hover:bg-gray-800 hover:text-red-400" : "text-gray-600 hover:bg-red-50 hover:text-red-600"} transition-all`}>
-          <LogOut size={18} className="flex-shrink-0" />
+          <LogOut size={18} className="shrink-0" />
           {!collapsed && <span>{t.logout}</span>}
         </button>
       </div>
@@ -615,7 +615,7 @@ const Dashboard = ({ lang, dark, addToast }) => {
         {stats.map((s, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }}
             className={`p-5 rounded-2xl border ${dark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-100"} shadow-sm`}>
-            <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${colorMap[s.color]} flex items-center justify-center mb-3 shadow-lg`}>
+            <div className={`w-10 h-10 rounded-xl bg-linear-to-br ${colorMap[s.color]} flex items-center justify-center mb-3 shadow-lg`}>
               <s.icon size={18} className="text-white" />
             </div>
             <div className={`text-2xl font-extrabold ${dark ? "text-white" : "text-gray-900"}`}>{s.value}</div>
@@ -665,7 +665,7 @@ const Dashboard = ({ lang, dark, addToast }) => {
             <div className="flex-1 space-y-2">
               {DISEASE_DISTRIBUTION.map((d, i) => (
                 <div key={i} className="flex items-center gap-2 text-xs">
-                  <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: d.color }} />
+                  <div className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: d.color }} />
                   <span className={dark ? "text-gray-300" : "text-gray-600"}>{d.name}</span>
                   <span className="ml-auto font-bold" style={{ color: d.color }}>{d.value}%</span>
                 </div>
@@ -838,7 +838,7 @@ const DiagnosisPage = ({ lang, dark, addToast, onEmergency }) => {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
             <GlassCard dark={dark} className="overflow-hidden">
               {/* Result header */}
-              <div className={`p-5 border-b ${dark ? "border-gray-700 bg-gray-800/60" : "border-gray-100 bg-gradient-to-r from-emerald-50 to-teal-50"}`}>
+              <div className={`p-5 border-b ${dark ? "border-gray-700 bg-gray-800/60" : "border-gray-100 bg-linear-to-r from-emerald-50 to-teal-50"}`}>
                 <div className="flex items-start justify-between mb-3">
                   <div>
                     <div className={`text-xs font-bold uppercase tracking-wider mb-1 ${dark ? "text-gray-400" : "text-gray-500"}`}>{t.diseaseDetected}</div>
@@ -850,7 +850,7 @@ const DiagnosisPage = ({ lang, dark, addToast, onEmergency }) => {
                   <span className={`text-sm ${dark ? "text-gray-400" : "text-gray-500"}`}>{t.confidence}</span>
                   <div className="flex-1 h-3 rounded-full bg-gray-100 dark:bg-gray-700 overflow-hidden">
                     <motion.div initial={{ width: 0 }} animate={{ width: `${result.confidence}%` }} transition={{ duration: 1.2, ease: "easeOut" }}
-                      className={`h-full rounded-full bg-gradient-to-r ${result.confidence > 85 ? "from-emerald-400 to-emerald-600" : "from-amber-400 to-amber-600"}`} />
+                      className={`h-full rounded-full bg-linear-to-r ${result.confidence > 85 ? "from-emerald-400 to-emerald-600" : "from-amber-400 to-amber-600"}`} />
                   </div>
                   <span className={`text-sm font-extrabold ${result.confidence > 85 ? "text-emerald-600" : "text-amber-600"}`}>{result.confidence}%</span>
                 </div>
@@ -865,7 +865,7 @@ const DiagnosisPage = ({ lang, dark, addToast, onEmergency }) => {
                   <ul className="space-y-1.5">
                     {result.symptoms.map((s, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-red-400 flex-shrink-0" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0" />
                         <span className={dark ? "text-gray-300" : "text-gray-600"}>{s}</span>
                       </li>
                     ))}
@@ -880,7 +880,7 @@ const DiagnosisPage = ({ lang, dark, addToast, onEmergency }) => {
                   <ul className="space-y-1.5">
                     {result.causes.map((c, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
                         <span className={dark ? "text-gray-300" : "text-gray-600"}>{c}</span>
                       </li>
                     ))}
@@ -895,7 +895,7 @@ const DiagnosisPage = ({ lang, dark, addToast, onEmergency }) => {
                   <ul className="space-y-1.5">
                     {result.prevention.map((p, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm">
-                        <Check size={12} className="text-emerald-500 flex-shrink-0" />
+                        <Check size={12} className="text-emerald-500 shrink-0" />
                         <span className={dark ? "text-gray-300" : "text-gray-600"}>{p}</span>
                       </li>
                     ))}
@@ -910,7 +910,7 @@ const DiagnosisPage = ({ lang, dark, addToast, onEmergency }) => {
                   <ul className="space-y-1.5">
                     {result.firstAid.map((f, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm">
-                        <span className="w-4 h-4 rounded-full bg-pink-100 text-pink-600 text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
+                        <span className="w-4 h-4 rounded-full bg-pink-100 text-pink-600 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">{i + 1}</span>
                         <span className={dark ? "text-gray-300" : "text-gray-600"}>{f}</span>
                       </li>
                     ))}
@@ -920,12 +920,12 @@ const DiagnosisPage = ({ lang, dark, addToast, onEmergency }) => {
 
               {result.severity === "Critical" && (
                 <div className="mx-5 mb-5 p-4 rounded-xl bg-red-50 border border-red-200 flex items-center gap-3">
-                  <AlertTriangle size={20} className="text-red-500 flex-shrink-0" />
+                  <AlertTriangle size={20} className="text-red-500 shrink-0" />
                   <div className="flex-1">
                     <div className="text-sm font-bold text-red-700">Critical Severity — Immediate Action Required</div>
                     <div className="text-xs text-red-600 mt-0.5">Contact your veterinarian immediately. Do not wait.</div>
                   </div>
-                  <GradientBtn variant="danger" onClick={() => onEmergency(result)} className="flex-shrink-0">
+                  <GradientBtn variant="danger" onClick={() => onEmergency(result)} className="shrink-0">
                     <Phone size={14} />
                   </GradientBtn>
                 </div>
@@ -1005,7 +1005,7 @@ const AnimalsPage = ({ lang, dark, addToast }) => {
           <motion.div key={a.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }} layout>
             <GlassCard dark={dark} className="p-5">
               <div className="flex items-start gap-3 mb-4">
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-3xl ${dark ? "bg-gray-700" : "bg-gray-100"} flex-shrink-0`}>
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-3xl ${dark ? "bg-gray-700" : "bg-gray-100"} shrink-0`}>
                   {a.image}
                 </div>
                 <div className="flex-1 min-w-0">
@@ -1122,14 +1122,14 @@ const NotificationsPage = ({ lang, dark }) => {
             onClick={() => setNotes(notes.map(nn => nn.id === n.id ? { ...nn, read: true } : nn))}
             className={`p-4 rounded-2xl border cursor-pointer transition-all hover:scale-[1.01] ${bgMap[n.type]} ${!n.read ? "ring-1 ring-offset-0" : ""} ${n.type === "critical" && !n.read ? "ring-red-300" : ""}`}>
             <div className="flex items-start gap-3">
-              <div className={`w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 ${n.type === "critical" ? "bg-red-100" : n.type === "warning" ? "bg-amber-100" : n.type === "success" ? "bg-emerald-100" : "bg-blue-100"}`}>
+              <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${n.type === "critical" ? "bg-red-100" : n.type === "warning" ? "bg-amber-100" : n.type === "success" ? "bg-emerald-100" : "bg-blue-100"}`}>
                 {iconMap[n.type]}
               </div>
               <div className="flex-1 min-w-0">
                 <div className={`font-semibold text-sm ${dark ? "text-white" : "text-gray-900"} ${!n.read ? "font-bold" : ""}`}>{n.title}</div>
                 <div className={`text-xs mt-1 ${dark ? "text-gray-400" : "text-gray-500"}`}>{n.body}</div>
               </div>
-              <div className="flex items-center gap-2 flex-shrink-0">
+              <div className="flex items-center gap-2 shrink-0">
                 <span className={`text-xs ${dark ? "text-gray-500" : "text-gray-400"}`}>{n.time}</span>
                 {!n.read && <div className="w-2 h-2 rounded-full bg-emerald-500" />}
               </div>
@@ -1265,12 +1265,12 @@ const VoicePage = ({ lang, dark }) => {
             <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
               className={`flex gap-3 ${m.role === "user" ? "justify-end" : ""}`}>
               {m.role === "assistant" && (
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-linear-to-br from-emerald-500 to-teal-500 flex items-center justify-center shrink-0">
                   <Leaf size={14} className="text-white" />
                 </div>
               )}
               <div className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm ${m.role === "user"
-                ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-tr-sm"
+                ? "bg-linear-to-r from-emerald-500 to-teal-500 text-white rounded-tr-sm"
                 : dark ? "bg-gray-800 text-gray-300 rounded-tl-sm" : "bg-gray-100 text-gray-700 rounded-tl-sm"}`}>
                 {m.text}
               </div>
@@ -1288,7 +1288,7 @@ const VoicePage = ({ lang, dark }) => {
           <motion.button onClick={handleListen} disabled={listening}
             whileTap={{ scale: 0.95 }}
             className={`relative w-20 h-20 rounded-full flex items-center justify-center shadow-xl transition-all
-              ${listening ? "bg-red-500 shadow-red-500/40" : "bg-gradient-to-br from-emerald-500 to-teal-500 shadow-emerald-500/40"}`}>
+              ${listening ? "bg-red-500 shadow-red-500/40" : "bg-linear-to-br from-emerald-500 to-teal-500 shadow-emerald-500/40"}`}>
             {listening && (
               <motion.div animate={{ scale: [1, 1.4, 1] }} transition={{ repeat: Infinity, duration: 1.5 }}
                 className="absolute inset-0 rounded-full bg-emerald-400/30" />
@@ -1387,7 +1387,7 @@ const SettingsPage = ({ lang, setLang, dark, setDark }) => {
       <GlassCard dark={dark} className="p-5">
         <div className={`text-sm font-bold mb-4 ${dark ? "text-gray-300" : "text-gray-700"}`}>Account</div>
         <div className="flex items-center gap-4 mb-4">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white font-extrabold text-2xl">R</div>
+          <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white font-extrabold text-2xl">R</div>
           <div>
             <div className={`font-bold ${dark ? "text-white" : "text-gray-900"}`}>Ravi Kumar</div>
             <div className="text-sm text-emerald-600">Farmer • Karnataka</div>
@@ -1496,7 +1496,7 @@ export default function App() {
                       <Bell size={18} />
                       {unreadCount > 0 && <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-red-500 animate-pulse" />}
                     </button>
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white text-xs font-bold">
+                    <div className="w-8 h-8 rounded-full bg-linear-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white text-xs font-bold">
                       {(user?.name || "U")[0]}
                     </div>
                   </div>
@@ -1527,3 +1527,4 @@ export default function App() {
     </div>
   );
 }
+

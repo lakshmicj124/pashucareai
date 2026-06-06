@@ -118,6 +118,18 @@ class MockCollection:
                 results.append(dict(doc))
         return MockCursor(results)
 
+    async def count_documents(self, query=None):
+        query = query or {}
+        count = 0
+        for doc in self.documents:
+            match = True
+            for k, v in query.items():
+                if doc.get(k) != v:
+                    match = False
+            if match:
+                count += 1
+        return count
+
     async def delete_one(self, query):
         for idx, doc in enumerate(self.documents):
             match = True

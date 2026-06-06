@@ -37,3 +37,15 @@ async def get_current_user(
             detail="User not found",
         )
     return user
+
+
+async def get_current_admin(
+    user: dict = Depends(get_current_user),
+):
+    """Ensure the user has an admin role."""
+    if user.get("role") != "admin":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Not enough permissions",
+        )
+    return user

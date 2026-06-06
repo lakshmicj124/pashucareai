@@ -130,7 +130,7 @@ const EmergencyAlert = ({ isOpen, onClose, diseaseName, severity, firstAid = [] 
             className="w-full max-w-xl bg-slate-900 border border-red-500/40 rounded-2xl overflow-hidden shadow-2xl shadow-red-900/30"
           >
             {/* Header banner */}
-            <div className="bg-gradient-to-r from-red-700 to-rose-800 p-6 text-slate-50 relative">
+            <div className="bg-linear-to-r from-red-700 to-rose-800 p-6 text-slate-50 relative">
               <button
                 onClick={onClose}
                 className="absolute top-4 right-4 p-2 rounded-full hover:bg-white/10 text-white/80 hover:text-white transition-colors cursor-pointer"
@@ -382,3 +382,4 @@ const EmergencyAlert = ({ isOpen, onClose, diseaseName, severity, firstAid = [] 
 };
 
 export default EmergencyAlert;
+

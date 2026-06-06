@@ -24,7 +24,8 @@ const Navbar = () => {
 
   const navItems = [
     { name: t("home"), path: "/", icon: Home },
-    ...(user ? [{ name: "Dashboard", path: "/dashboard", icon: LayoutDashboard }] : []),
+    ...(user && user.role !== "admin" ? [{ name: "Dashboard", path: "/dashboard", icon: LayoutDashboard }] : []),
+    ...(user && user.role === "admin" ? [{ name: "Admin Panel", path: "/admin/dashboard", icon: ShieldAlert }] : []),
     { name: t("detect"), path: "/detect", icon: ShieldAlert },
     { name: t("chat"), path: "/chat", icon: MessageSquare },
     { name: t("vets"), path: "/vets", icon: Compass },
@@ -43,7 +44,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent flex items-center gap-2">
+            <span className="text-2xl font-bold bg-linear-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent flex items-center gap-2">
               🐄 <span className="hidden sm:inline font-extrabold">PashuCare AI</span>
             </span>
           </Link>
@@ -108,7 +109,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   to="/register"
-                  className="px-4 py-2 text-sm font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 rounded-lg transition-all shadow-md shadow-emerald-500/20 text-slate-900 font-extrabold"
+                  className="px-4 py-2 text-sm bg-linear-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 rounded-lg transition-all shadow-md shadow-emerald-500/20 text-slate-900 font-extrabold"
                 >
                   {t("register")}
                 </Link>
@@ -191,7 +192,7 @@ const Navbar = () => {
                   <Link
                     to="/register"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-center py-2.5 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-900 font-extrabold"
+                    className="text-center py-2.5 rounded-lg bg-linear-to-r from-emerald-500 to-teal-500 text-slate-900 font-extrabold"
                   >
                     {t("register")}
                   </Link>
@@ -206,3 +207,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

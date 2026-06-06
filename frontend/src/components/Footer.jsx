@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-slate-950 border-t border-slate-900 text-slate-400 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
         <div className="flex justify-center items-center space-x-2">
-          <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
+          <span className="text-xl font-bold bg-linear-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
             🐄 PashuCare AI
           </span>
         </div>
@@ -24,3 +24,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

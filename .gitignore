@@ -9,3 +9,6 @@ backend/dataset/
 .vscode/
 brain/
 scratch/
+backend/uploads/
+pashucareai/
+fix.py

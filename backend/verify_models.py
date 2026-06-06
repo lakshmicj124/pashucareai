@@ -13,21 +13,25 @@ GOAT_MODEL_PATH = os.path.join(MODEL_DIR, "goat_model.pkl")
 
 # Define classes and paths for Cow model
 COW_CLASSES = {
-    "foot-and-mouth": "Foot and Mouth Disease",
-    "healthy": "Healthy",
-    "lumpy": "Lumpy Skin Disease"
+    "cow/foot_and_mouth_disease": "Foot and Mouth Disease",
+    "cow/healthy": "Healthy",
+    "cow/lumpy_skin_disease": "Lumpy Skin Disease",
+    "cow/mastitis": "Mastitis",
+    "cow/ringworm": "Ringworm",
+    "cow/black_quarter": "Black Quarter (Black Leg)",
+    "cow/theileriosis": "Theileriosis"
 }
 
 # Define classes and paths for Sheep model
 SHEEP_CLASSES = {
-    "bluetongue": "Bluetongue",
-    "foot_rot": "Foot Rot",
-    "healthy": "Healthy",
-    "orf": "Orf (Contagious Ecthyma)",
-    "ringworm": "Ringworm",
-    "mange": "Sarcoptic Mange",
-    "sheep_pox": "Sheep Pox",
-    "diseased sheep": "Sheep Scab (Psoroptic Mange)"
+    "sheep/bluetongue": "Bluetongue",
+    "sheep/foot_rot": "Foot Rot",
+    "sheep/healthy": "Healthy",
+    "sheep/ringworm": "Ringworm",
+    "sheep/mange": "Sarcoptic Mange",
+    "sheep/sheep_pox": "Sheep Pox",
+    "sheep/diseased_sheep": "Sheep Scab (Psoroptic Mange)",
+    "orf": "Orf (Contagious Ecthyma)"
 }
 
 # Define classes and paths for Goat model
@@ -134,10 +138,7 @@ def verify_animal_model(model_path, animal_name, classes_dict):
             continue
             
         for i, img_path in enumerate(img_imgs_sample):
-            if animal_name == "Goat":
-                features = extract_goat_features(img_path)
-            else:
-                features = extract_cow_sheep_features(img_path)
+            features = extract_goat_features(img_path)
                 
             if features is None:
                 continue

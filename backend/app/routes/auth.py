@@ -52,6 +52,7 @@ async def register(data: UserCreate):
         "email": email_clean,
         "phone_number": phone_clean,
         "password": hash_password(data.password),
+        "role": "user",
         "created_at": datetime.now(timezone.utc).isoformat(),
     }
     result = await db.users.insert_one(user_doc)
@@ -64,7 +65,8 @@ async def register(data: UserCreate):
             id=user_id, 
             name=user_doc["name"], 
             email=user_doc["email"], 
-            phone_number=user_doc.get("phone_number")
+            phone_number=user_doc.get("phone_number"),
+            role=user_doc.get("role", "user")
         ),
     )
 
@@ -88,7 +90,8 @@ async def login(data: UserLogin):
             id=user_id, 
             name=user["name"], 
             email=user["email"], 
-            phone_number=user.get("phone_number")
+            phone_number=user.get("phone_number"),
+            role=user.get("role", "user")
         ),
     )
 
@@ -101,6 +104,7 @@ async def get_me(user=Depends(get_current_user)):
         name=user["name"],
         email=user["email"],
         phone_number=user.get("phone_number"),
+        role=user.get("role", "user"),
     )
 
 
@@ -146,6 +150,7 @@ async def update_profile(data: UserUpdate, user=Depends(get_current_user)):
         name=data.name.strip(),
         email=email_clean,
         phone_number=phone_clean,
+        role=user.get("role", "user"),
     )
 
 

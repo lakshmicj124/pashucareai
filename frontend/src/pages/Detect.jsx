@@ -185,7 +185,7 @@ const Detect = () => {
       <div className="max-w-4xl mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-2">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-emerald-400 to-teal-400">
             {t("detect")}
           </h1>
           <p className="text-slate-400 text-sm max-w-lg mx-auto">
@@ -218,7 +218,7 @@ const Detect = () => {
                   }}
                   className={`py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-center space-x-2 border cursor-pointer ${
                     animalType === type
-                      ? "bg-gradient-to-r from-emerald-500 to-teal-500 border-emerald-500 text-slate-950 shadow-md shadow-emerald-500/10"
+                      ? "bg-linear-to-r from-emerald-500 to-teal-500 border-emerald-500 text-slate-950 shadow-md shadow-emerald-500/10"
                       : "bg-slate-950 border-slate-850 text-slate-400 hover:text-white"
                   }`}
                 >
@@ -336,7 +336,7 @@ const Detect = () => {
             type="button"
             onClick={handleAnalyze}
             disabled={!image || analyzing}
-            className="w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-extrabold text-base rounded-xl transition shadow-lg shadow-emerald-500/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 cursor-pointer"
+            className="w-full py-4 bg-linear-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-extrabold text-base rounded-xl transition shadow-lg shadow-emerald-500/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 cursor-pointer"
           >
             {analyzing ? (
               <>
@@ -368,7 +368,7 @@ const Detect = () => {
                     <ShieldCheck className="w-12 h-12" />
                   </div>
                   <div className="space-y-2">
-                    <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                    <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-green-400 to-emerald-400">
                       {t("noVisibleSigns")}
                     </h2>
                     <p className="text-slate-400 text-sm max-w-md mx-auto">
@@ -426,7 +426,7 @@ const Detect = () => {
                           initial={{ width: 0 }}
                           animate={{ width: `${result.confidence}%` }}
                           transition={{ duration: 0.8, ease: "easeOut" }}
-                          className="bg-gradient-to-r from-emerald-500 to-teal-500 h-full rounded-full"
+                          className="bg-linear-to-r from-emerald-500 to-teal-500 h-full rounded-full"
                         />
                       </div>
                     </div>
@@ -584,3 +584,4 @@ const Detect = () => {
 };
 
 export default Detect;
+
